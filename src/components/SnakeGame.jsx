@@ -885,6 +885,103 @@ const SnakeGame = ({ onReturnToMenu }) => {
           width: '300px'
         }}>
           <h2 style={{ color: 'white', marginBottom: '20px' }}>Select Difficulty</h2>
+          
+          {/* Инструкция по управлению */}
+          <div style={{
+            background: 'rgba(0,0,0,0.3)',
+            padding: '1rem',
+            borderRadius: '8px',
+            marginBottom: '20px'
+          }}>
+            <p style={{
+              color: '#888',
+              fontSize: '0.9rem',
+              marginBottom: '0.8rem'
+            }}>
+              Управление:
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr 1fr',
+              gap: '0.5rem',
+              width: 'fit-content',
+              margin: '0 auto'
+            }}>
+              {/* Верхняя стрелка */}
+              <div style={{ gridColumn: '2' }}>
+                <div style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '6px',
+                  padding: '0.5rem',
+                  width: '40px',
+                  height: '40px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#fff',
+                  fontSize: '1.2rem'
+                }}>
+                  ↑
+                </div>
+              </div>
+              {/* Левая стрелка */}
+              <div style={{ gridColumn: '1', gridRow: '2' }}>
+                <div style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '6px',
+                  padding: '0.5rem',
+                  width: '40px',
+                  height: '40px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#fff',
+                  fontSize: '1.2rem'
+                }}>
+                  ←
+                </div>
+              </div>
+              {/* Нижняя стрелка */}
+              <div style={{ gridColumn: '2', gridRow: '2' }}>
+                <div style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '6px',
+                  padding: '0.5rem',
+                  width: '40px',
+                  height: '40px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#fff',
+                  fontSize: '1.2rem'
+                }}>
+                  ↓
+                </div>
+              </div>
+              {/* Правая стрелка */}
+              <div style={{ gridColumn: '3', gridRow: '2' }}>
+                <div style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '6px',
+                  padding: '0.5rem',
+                  width: '40px',
+                  height: '40px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#fff',
+                  fontSize: '1.2rem'
+                }}>
+                  →
+                </div>
+              </div>
+            </div>
+          </div>
+
           {Object.entries(DIFFICULTY_PRESETS).map(([key, preset]) => (
             <button
               key={key}
